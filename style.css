@@ -14,6 +14,7 @@
     --white: #fafafa;
     --black-mode: #0f0f0f;
     --pure-black: #000;
+    --neu-white: #f0f3f8;
 }
 
 html {
@@ -40,6 +41,7 @@ h2 {
     --white: #0f0f0f;
     --black-mode: #0f0f0f;
     --pure-black: #fafafa;
+    --neu-white: #141414;
 }
 
 body {
@@ -86,7 +88,7 @@ body {
 
 .home-darkMode {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -341,4 +343,60 @@ main {
 .dark-mode .project-card:hover {
     border: var(--secondary-blue);
     box-shadow: 0 0 20px rgba(125, 211, 252, 0.25);
+}
+
+@media (max-width:910px) {
+    .nav-bar {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width:651px) {
+    .nav-bar {
+        padding: 0 10px;
+    }
+
+    .home-darkMode ul {
+        margin-right: 14px;
+    }
+}
+
+@media (max-width:545px) {
+    .nav-bar {
+        padding: 0 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .home-darkMode {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .home-darkMode ul {
+        margin-right: 14px;
+    }
+}
+@media (max-width:545px) {
+    .nav-bar {
+        padding: 0 10px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .home-darkMode {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .home-darkMode ul {
+        margin-right: 14px;
+    }
+    .nav-bar li{
+        font-size: 18px;
+    }
 }
