@@ -26,14 +26,10 @@ html {
 button {
     outline: 0;
     border: 0;
+    cursor: pointer;
 }
 
-h2 {
-    text-align: center;
-    font-size: 52px;
-    font-weight: bolder;
 
-}
 
 .dark-mode {
     --primary-blue: #38B6FF;
@@ -86,20 +82,17 @@ body {
     color: var(--primary-blue);
 }
 
-.home-darkMode {
+
+.home-darkMode button {
+    background: var(--white);
+}
+.home-darkMode{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around;
+        width: 537px;
 }
-
-.home-darkMode ul {
-    margin-right: 54px;
-}
-
-.nav-bar li {
-    display: inline-block;
-    margin: 0 10px 0 10px;
-    list-style: none;
+.nav-bar h2 {
+    gap: 10px;
     font-size: 23px;
     cursor: pointer;
 }
@@ -110,14 +103,14 @@ body {
     transition: 0.3s ease;
 }
 
-.nav-bar svg {
+.home-darkMode button svg {
+    color: var(--pure-black);
     transition: 0.5s ease;
 }
 
-/* transition */
 
 /* hover effect */
-.nav-bar li:hover a {
+.nav-bar h2:hover a {
     color: var(--secondary-blue);
 }
 
@@ -209,6 +202,7 @@ main {
 
 .right-hero {
     position: relative;
+    flex-wrap: wrap;
 }
 
 .profile-display {
@@ -345,58 +339,33 @@ main {
     box-shadow: 0 0 20px rgba(125, 211, 252, 0.25);
 }
 
-@media (max-width:910px) {
-    .nav-bar {
-        padding: 0 40px;
-    }
-}
 
-@media (max-width:651px) {
+
+@media (max-width:1045px) {
     .nav-bar {
         padding: 0 10px;
     }
 
-    .home-darkMode ul {
-        margin-right: 14px;
-    }
+
 }
-
-@media (max-width:545px) {
-    .nav-bar {
-        padding: 0 10px;
-    }
-
-    .logo {
+@media (max-width:590px) {
+    .logo{
         display: none;
     }
+}
 
+@media (max-width:460px) {
+  
     .home-darkMode {
-        justify-content: space-around;
         width: 100%;
     }
 
     .home-darkMode ul {
-        margin-right: 14px;
-    }
-}
-@media (max-width:545px) {
-    .nav-bar {
-        padding: 0 10px;
-    }
-
-    .logo {
-        display: none;
-    }
-
-    .home-darkMode {
-        justify-content: space-around;
         width: 100%;
     }
 
-    .home-darkMode ul {
-        margin-right: 14px;
-    }
-    .nav-bar li{
-        font-size: 18px;
+    .nav-bar li {
+        margin: 0 15px;
+        font-size: 20px;
     }
 }

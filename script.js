@@ -4,7 +4,7 @@ const blueBg = document.getElementById("blueBg")
 
 
 darkModeContainer.addEventListener("click",()=>{
-    // darkModeContainer.innerHTML = '<i class="fa-regular fa-sun"></i>'
+
     document.body.classList.toggle("dark-mode");
     if( document.body.classList.contains("dark-mode")){
         darkModeContainer.innerHTML = '<i class="fa-regular fa-sun"></i>'
