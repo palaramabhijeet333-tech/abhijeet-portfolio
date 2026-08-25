@@ -144,6 +144,7 @@ main {
     width: 627px;
     transform: rotate(-50deg);
     bottom: -56px;
+   animation: smoothDropBg 2.5s ease forwards;
 }
 
 .owner {
@@ -153,6 +154,7 @@ main {
     width: 950px;
     bottom: 0;
     right: 320px;
+animation: smoothDropOwner 1s ease-out 0.15s both;
 }
 
 .hero-info {
@@ -166,9 +168,7 @@ main {
     font-size: 70px;
 }
 
-.name {
-    color: var(--primary-blue);
-}
+
 
 .hero-info p {
     font-size: 25px;
@@ -186,12 +186,7 @@ main {
     color: var(--pure-black);
 }
 
-/* .social-media {
-    position: absolute;
-    bottom: 25px;
-    left: 40px;
 
-} */
 
 .social-media ul {
     display: flex;
@@ -224,12 +219,37 @@ main {
     width: 468px;
 }
 
-.welcome-text {
+.highligh{
     color: var(--primary-blue);
-    font-size: 35px;
+    
+}
+.guide .highligh{
+    -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.685);
+    text-decoration: underline;
 }
 
+/* Drops down as a fully solid image */
+@keyframes smoothDropOwner {
+    0% {
+        transform: translateY(-80vh) scale(0.98);
+        /* filter: blur(4px); */
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        /* filter: blur(0); */
+    }
+}
 
+@keyframes smoothDropBg {
+    0% {
+        transform: translateY(-80vh) rotate(-50deg) scale(0.95);
+        /* filter: blur(6px); */
+    }
+    100% {
+        transform: translateY(0) rotate(-50deg) scale(1);
+        /* filter: blur(0); */
+    }
+}
 
 
 /* hover effect */
