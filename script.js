@@ -48,10 +48,16 @@ darkModeContainer.addEventListener("click",()=>{
 forwardBtn.addEventListener("click",()=>{
     const card = certificateDisplay.querySelector(".certificate-card");
     certificateDisplay.scrollLeft += (card.offsetWidth)*3 + 20;
-    certificateDisplay.style.behavior = "smooth";
+   certificateDisplay.scrollBy({
+    left:(card.offsetWidth * 3) + 20,
+    behavior:"smooth"
+   })
 })
 backBtn.addEventListener("click",()=>{
     const card = certificateDisplay.querySelector(".certificate-card");
     certificateDisplay.scrollLeft -= (card.offsetWidth)*3 + 20;
-    certificateDisplay.style.behavior = "smooth";
+     certificateDisplay.scrollBy({
+    left:-(card.offsetWidth * 3) + 20,
+    behavior:"smooth"
+   })
 })
