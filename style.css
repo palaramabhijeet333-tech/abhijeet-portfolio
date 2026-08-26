@@ -77,7 +77,7 @@ body {
     font-family: "Merriweather", serif;
     cursor: pointer;
     color: var(--pure-black);
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .logo:hover {
@@ -107,16 +107,14 @@ body {
     transition: 0.3s ease;
 }
 
+.nav-bar h2:hover a {
+    color: var(--secondary-blue);
+}
+
 .home-darkMode button svg {
     color: var(--pure-black);
     font-size: 18px;
     transition: 0.5s ease;
-}
-
-
-/* hover effect */
-.nav-bar h2:hover a {
-    color: var(--secondary-blue);
 }
 
 .nav-bar svg:hover {
@@ -125,7 +123,6 @@ body {
 }
 
 /* main section */
-
 main {
     margin-top: 80px;
 }
@@ -135,8 +132,6 @@ main h2 {
     text-align: center;
     font-size: 40px;
 }
-
-
 
 .Hero {
     display: flex;
@@ -176,8 +171,6 @@ main h2 {
     font-size: 70px;
 }
 
-
-
 .hero-info p {
     font-size: 25px;
 
@@ -198,8 +191,6 @@ main h2 {
     animation: slideInRight 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
 }
 
-
-
 .social-media ul {
     display: flex;
     gap: 20px;
@@ -210,6 +201,14 @@ main h2 {
     font-size: 25px;
     padding: 15px;
     border-radius: 10px;
+}
+
+.Hero li:hover {
+    background: grey;
+}
+
+.Hero li:hover svg {
+    transform: scale(1.2);
 }
 
 .social-media li a {
@@ -295,20 +294,6 @@ main h2 {
     }
 }
 
-/* hover effect */
-.Hero li:hover svg {
-    transform: scale(1.2);
-}
-
-.Hero li:hover {
-    background: grey;
-}
-
-.name:hover {
-    transform: translateY(-9px);
-}
-
-
 /* SKILL PAGE */
 .skill-page {
     min-height: 100vh;
@@ -316,7 +301,6 @@ main h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .skills-display {
@@ -325,7 +309,6 @@ main h2 {
     width: 100%;
     gap: 10px;
     margin-bottom: 18px;
-    /* height: 45px; */
 }
 
 .skill-page h3 {
@@ -378,51 +361,60 @@ main h2 {
 .certificate-scroll-container {
     overflow-x: scroll;
     scroll-behavior: smooth;
-    height: 200px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
     width: 80%;
-     padding: 0 10px;
+    padding: 0 10px;
     height: 400px;
 }
-.display-certificates button{
-       width: 50px;
+
+.certificate-scroll-container::-webkit-scrollbar {
+    scrollbar-width: none;
+}
+
+.display-certificates button {
+    width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 3px solid var(--pure-black);
     font-size: 20px;
     font-weight: bolder;
-    color: var(--pure-black);
+    color: var(--primary-blue);
     background: var(--white);
 }
+
 .certificate-card {
-    width: calc((100% - 40px) / 3);
+    width: 100%;
+    max-width: calc((100% - 40px) / 3);
     min-width: calc((100% - 40px) / 3);
     border: 2px solid var(--secondary-blue);
     flex: 0 0 calc((100% - 40px) / 3);
     border-radius: 15px;
     height: 250px;
-    /* height: inherit; */
     transition: 0.3s ease;
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     cursor: pointer;
 }
-.certificate-card img{
+
+.certificate-card img {
     width: 100%;
     object-fit: cover;
     transition: 0.3s ease;
 }
-.certificate-card:hover{
+
+.certificate-card:hover {
     transform: translateY(-8px);
     border: 2px solid var(--primary-blue);
     box-shadow: 0 8px 20px rgba(56, 182, 255, 0.25);
 }
-.certificate-card:hover img{
+
+.certificate-card:hover img {
     transform: scale(1.03);
 }
+
 /* projects */
 .projects {
     min-height: 100vh;
@@ -517,16 +509,65 @@ main h2 {
     height: 100vh;
 }
 
+footer {
+    height: 80vh;
+    box-shadow: 0 -15px 50px rgba(0, 0, 0, 0.25);
+    position: relative;
+    /* box-shadow: 0 -20px 60px 5px rgba(0, 0, 0, 0.3); */
+    /* box-shadow: 
+    0 -10px 25px rgba(0, 0, 0, 0.15),
+    0 -20px 50px rgba(0, 0, 0, 0.2); */
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+footer h2 {
+    position: absolute;
+    right: 35%;
+    top: 3%;
+    font-size: 154px;
+    right: 9%;
+    color: #e7efff;
+    -webkit-text-stroke: 0.3px var(--primary-blue);
+}
+.dark-mode footer h3{
+    color:#f0f3f8;
+}
+footer h3 {
+    position: absolute;
+    top: 24px;
+    right: 51%;
+    font-size: 25px;
+}
+
+footer p {
+    position: absolute;
+    top: 29%;
+    color: var(--pure-black);
+    right: 11%;
+    font-size: 25px;
+}
+
+.contact-socialMedia-section {
+    position: absolute;
+    bottom: 0;
+    width: 93%;
+    border-top: 3px solid var(--pure-black);
+    left: 4%;
+    height: 55%;
+}
+.social-media{
+    margin-top: 5px;
+}
+footer li:hover {
+    background: grey;
+}
 
 @media (max-width:1045px) {
     .nav-bar {
         padding: 0 10px;
     }
-
-
 }
-
-
 
 @media (max-width:590px) {
     .logo {
