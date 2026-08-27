@@ -47,7 +47,7 @@ body {
     min-height: 100vh;
     width: 100%;
     color: var(--pure-black);
-    transition: background 0.2s ease-out,color 0.3s ease-out;
+    transition: background 0.2s ease-out, color 0.3s ease-out;
 }
 
 /* navigation bar  */
@@ -97,7 +97,7 @@ body {
 }
 
 .nav-bar a {
-     gap: 10px;
+    gap: 10px;
     font-size: 23px;
     cursor: pointer;
     text-decoration: none;
@@ -105,7 +105,7 @@ body {
     transition: 0.3s ease;
 }
 
-.nav-bar a:hover{
+.nav-bar a:hover {
     color: var(--secondary-blue);
 }
 
@@ -138,7 +138,7 @@ main h2 {
     overflow: hidden;
 }
 
-#blueBg {
+.blue-bg {
     position: absolute;
     bottom: 0;
     right: 438px;
@@ -233,6 +233,7 @@ main h2 {
 
 }
 
+
 .guide .highligh {
     -webkit-text-stroke: 0.3px rgba(0, 0, 0, 0.685);
     text-decoration: underline;
@@ -296,7 +297,7 @@ main h2 {
 .skill-page {
     min-height: 100vh;
     padding: 0 20px 20px 20px;
-        width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -516,14 +517,16 @@ footer {
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
 }
-.dark-mode footer{
+
+.dark-mode footer {
 
     /* box-shadow: 0 -15px 50px rgba(56, 182, 255, 0.2); */
     box-shadow: 0 -15px 45px rgba(255, 255, 255, 0.08);
-  
+
 
 }
-footer h2 {
+
+footer h3 {
     position: absolute;
     right: 35%;
     top: 3%;
@@ -532,17 +535,23 @@ footer h2 {
     color: #e7efff;
     -webkit-text-stroke: 0.3px var(--primary-blue);
 }
-.dark-mode footer h3{
-    color:#f0f3f8;
+
+.dark-mode footer h3 {
+    color: #f0f3f8;
 }
-footer h3 {
+
+.dark-mode footer .highlight {
+    color: var(--secondary-blue);
+}
+
+footer .top-paragraph {
     position: absolute;
     top: 24px;
     right: 51%;
     font-size: 25px;
 }
 
-footer p {
+footer .bottom-paragraph {
     position: absolute;
     top: 29%;
     color: var(--pure-black);
@@ -558,11 +567,39 @@ footer p {
     left: 4%;
     height: 55%;
 }
-.social-media{
-    margin-top: 5px;
+
+.social-media {
+    position: absolute;
+    top: 15%;
 }
+
+.Email {
+    position: absolute;
+    top: 15%;
+}
+
+.Phone-number {
+    position: absolute;
+    right: 19%;
+}
+
+.location {
+    position: absolute;
+    top: 44%;
+    right: 16.5%;
+}
+
 footer li:hover {
     background: grey;
+}
+
+.credits {
+    height: 120px;
+    border-top: 2px solid var(--pure-black);
+    color: var(--white);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 @media (max-width:1045px) {
@@ -582,9 +619,54 @@ footer li:hover {
     }
 }
 
-@media (max-width:460px) {
+@media (min-width:300px) and (max-width:460px) {
     .Hero {
         height: 100dvh;
+    }
+
+    .blue-bg {
+        top: 0;
+        right: 56px;
+        width: 338px;
+    }
+
+    .owner {
+        width: 520px;
+        top: -30px;
+        right: 0;
+    }
+
+    .hero-info {
+        top: 51%;
+        left: 6%;
+    }
+
+    .guide {
+        bottom: 64px;
+        left: 7%;
+        width: 92%;
+    }
+
+    .certificate-scroll-container {
+        flex-direction: column;
+    }
+
+    .certificate-card {
+        max-width: 100%;
+        flex: 0 0 calc((100% - 40px) / 1.8)
+    }
+
+    .display-certificates button {
+        display: none;
+    }
+
+
+    .hero-info p {
+        font-size: 18px;
+    }
+
+    .full-name h1 {
+        font-size: 53px;
     }
 
     .home-darkMode {
@@ -596,4 +678,49 @@ footer li:hover {
         font-size: 30px;
     }
 
+    footer .top-paragraph {
+        top: 15%;
+        left: 8px;
+        font-size: 14px;
+        width: 64%;
+
+    }
+
+    footer h3 {
+        top: 17%;
+        font-size: 57px;
+        width: 97%;
+        left: 1%;
+    }
+
+    footer .bottom-paragraph {
+        top: 28%;
+        right: 6%;
+        font-size: 14px;
+        width: 66%;
+        text-align: right;
+    }
+
+    .contact-socialMedia-section {
+        height: 59%;
+    }
+
+    .Email {
+        top: 4%;
+    }
+
+    .Phone-number {
+        left: 0%;
+        top: 11%;
+    }
+
+    .location {
+        top: 18%;
+        left: 0%;
+    }
+
+    .social-media {
+        top: 36%;
+        left: 14%;
+    }
 }
