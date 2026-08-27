@@ -138,6 +138,14 @@ main h2 {
     overflow: hidden;
 }
 
+.hero-picture-with-background {
+    width: 1000px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 498px;
+}
+
 .blue-bg {
     position: absolute;
     bottom: 0;
@@ -267,7 +275,7 @@ main h2 {
 @keyframes slideInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-80px);
+        transform: translateX(-100px);
         filter: blur(4px);
     }
 
@@ -512,6 +520,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     border-top-right-radius: 30px;
     border-top-left-radius: 30px;
     padding: 75px 10px 5px 10px;
@@ -520,12 +529,11 @@ footer {
 .dark-mode footer {
     box-shadow: 0 -15px 45px rgba(255, 255, 255, 0.08);
 }
-.footer-text-content{
+
+.footer-text-content {
     width: 100%;
     padding: 0 10px;
     margin-bottom: 15px;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 footer h3 {
@@ -565,26 +573,7 @@ footer .bottom-paragraph {
     padding: 30px 10px 0 10px;
 }
 
-/* .social-media {
-    position: absolute;
-    top: 15%;
-}
 
-.Email {
-    position: absolute;
-    top: 15%;
-}
-
-.Phone-number {
-    position: absolute;
-    right: 19%;
-}
-
-.location {
-    position: absolute;
-    top: 44%;
-    right: 16.5%;
-} */
 
 footer li:hover {
     background: grey;
@@ -598,7 +587,8 @@ footer li:hover {
     padding-top: 30px;
     text-align: center;
 }
-.credits p{
+
+.credits p {
     color: var(--pure-black);
 }
 
@@ -612,39 +602,44 @@ footer li:hover {
     .logo {
         display: none;
     }
-
-    .profile-display {
-        width: 50%;
-        height: 50%;
-    }
 }
 
-@media  (max-width:480px) {
+@media (max-width:480px) {
     .Hero {
         height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-picture-with-background {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 93%;
+        overflow: hidden;
     }
 
     .blue-bg {
-        top: 0;
-        right: 56px;
-        width: 338px;
+        position: absolute;
+        width: 71%;
+        left: 75px;
+        top: 3px;
     }
 
     .owner {
-        width: 520px;
-        top: -30px;
-        right: 0;
+        position: static;
+        width: 100%;
     }
 
     .hero-info {
-        top: 51%;
-        left: 6%;
+        position: static;
+        margin-bottom: 49px;
     }
 
     .guide {
-        bottom: 64px;
-        left: 7%;
-        width: 92%;
+        position: static;
+        width: 80%;
     }
 
     .certificate-scroll-container {
@@ -677,26 +672,27 @@ footer li:hover {
     main h3 {
         font-size: 30px;
     }
-    footer{
+
+    footer {
         position: static;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
     }
+
     footer .top-paragraph {
         font-size: 3vw;
         text-align: left;
     }
 
     footer h3 {
-
-                font-size: 12.6vw;
-                text-align: center;
+        font-size: 12.6vw;
+        text-align: center;
     }
 
     footer .bottom-paragraph {
         font-size: 3vw;
-        text-align: right;  
+        text-align: right;
     }
 
     .contact-socialMedia-section {
@@ -707,104 +703,4 @@ footer li:hover {
         justify-content: flex-end;
     }
 
-    /* .Email {
-        position: static
-    }
-
-    .Phone-number {
-        position: static;
-    }
-
-    .location {
-        position: static;
-    }
-
-    .social-media {
-        position: static;
-
-    }
-    .credits{
-        position: static;
-
-    } */
-
-     /* footer {
-        height: auto;
-        min-height: auto;
-        padding: 40px 15px 20px 15px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    footer .top-paragraph,
-    footer h3,
-    footer .bottom-paragraph {
-        position: relative;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        width: 100%;
-    }
-
-    footer .top-paragraph {
-        font-size: 13px;
-        margin-bottom: 5px;
-    }
-
-    footer h3 {
-        font-size: 34px;
-        line-height: 1.2;
-        margin: 10px 0;
-    }
-
-    footer .bottom-paragraph {
-        font-size: 14px;
-        margin-bottom: 25px;
-    }
-
-    .contact-socialMedia-section {
-        position: relative;
-        height: auto;
-        width: 100%;
-        left: auto;
-        bottom: auto;
-        border-top: 1px solid var(--pure-black);
-        padding-top: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        align-items: center;
-    }
-
-    .social-media,
-    .Email,
-    .Phone-number,
-    .location {
-        position: relative;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        font-size: 14px;
-        word-break: break-word;
-    }
-
-    .social-media ul {
-        justify-content: center;
-        padding: 0;
-    }
-
-    .credits {
-        position: relative;
-        bottom: auto;
-        height: auto;
-        margin-top: 30px;
-        padding-top: 15px;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        color: var(--pure-black);
-    }
-} */
 }
