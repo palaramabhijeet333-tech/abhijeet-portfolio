@@ -57,7 +57,7 @@ body {
     width: 100%;
     height: 80px;
     background: var(--white);
-     user-select: none;
+    user-select: none;
     -webkit-user-select: none;
 }
 
@@ -136,7 +136,7 @@ main h2 {
     height: calc(100vh - 80px);
     position: relative;
     overflow: hidden;
-     user-select: none;
+    user-select: none;
     -webkit-user-select: none;
 }
 
@@ -307,7 +307,7 @@ main h2 {
     width: 100%;
     display: flex;
     flex-direction: column;
-     user-select: none;
+    user-select: none;
     -webkit-user-select: none;
 }
 
@@ -511,6 +511,58 @@ main h2 {
     box-shadow: 0 0 20px rgba(125, 211, 252, 0.25);
 }
 
+.display-img-zoom {
+    display: none;
+    position: fixed;
+    inset: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+   
+    padding: 20px;
+}
+.display-img-zoom button{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    color: var(--pure-black);
+    font-size: 18px;
+    border-radius: 15px;
+    background: red;
+    align-self: self-end;
+}
+.zoom-element{
+    width: 100%;
+    height: 100%;
+     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.zoomed-image-card {
+    max-width: 90vh;
+    max-height: 80vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background: #000;
+    border: 3px solid var(--primary-blue);
+}
+
+.zoomed-image-card img {
+    max-width: 100%;
+    height: 80vh;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
+/* CONTACT AREA */
 .contact {
     height: 100vh;
 }
@@ -574,12 +626,14 @@ footer .bottom-paragraph {
     height: 55%;
     padding: 30px 10px 0 10px;
 }
-.contact-socialMedia-section p{
+
+.contact-socialMedia-section p {
     cursor: pointer;
 }
 
-.social-media{
-    margin-bottom: 15px;}
+.social-media {
+    margin-bottom: 15px;
+}
 
 footer li:hover {
     background: grey;
@@ -610,7 +664,7 @@ footer li:hover {
 }
 
 @media (max-width:480px) {
-    
+
     .Hero {
         height: 100dvh;
         display: flex;
