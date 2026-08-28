@@ -9,6 +9,8 @@ const certificateImg = certificateDisplay.querySelectorAll("img");
 const zoomContainer = document.querySelector(".display-img-zoom");
 const zoomImageCard = document.querySelector(".zoomed-image-card");
 const zoomImage = document.getElementById("zoomImage");
+const displayProject = document.querySelector(".project-display");
+const projectImg = displayProject.querySelectorAll("img");
 
 
 // FUNCTION FOR DARK AND LIGHT MODE.
@@ -57,7 +59,6 @@ function displayZoomedImg(e){
 }
 forwardBtn.addEventListener("click",()=>{
     const card = certificateDisplay.querySelector(".certificate-card");
-    certificateDisplay.scrollLeft += (card.offsetWidth)*3 + 20;
    certificateDisplay.scrollBy({
     left:(card.offsetWidth * 3) + 20,
     behavior:"smooth"
@@ -65,7 +66,6 @@ forwardBtn.addEventListener("click",()=>{
 });
 backBtn.addEventListener("click",()=>{
     const card = certificateDisplay.querySelector(".certificate-card");
-    certificateDisplay.scrollLeft -= (card.offsetWidth)*3 + 20;
      certificateDisplay.scrollBy({
     left:-(card.offsetWidth * 3) + 20,
     behavior:"smooth"
@@ -76,4 +76,8 @@ certificateImg.forEach(img =>{
 });
 cancelBtn.addEventListener("click",()=>{
     zoomContainer.style.display = "none"
+})
+
+projectImg.forEach(img =>{
+    img.addEventListener("click",displayZoomedImg);
 })
