@@ -73,7 +73,7 @@ body {
 
 /* Inside navigation */
 .logo {
-    font-size: 34px;
+    font-size: 2.125rem;
     font-weight: bolder;
     font-family: "Merriweather", serif;
     cursor: pointer;
@@ -176,11 +176,11 @@ main h2 {
 }
 
 .full-name h1 {
-    font-size: 70px;
+    font-size: 4.375rem;
 }
 
 .hero-info p {
-    font-size: 25px;
+    font-size: 1.5625rem;
 
 }
 
@@ -321,7 +321,7 @@ main h2 {
 }
 
 .skill-page h3 {
-    font-size: 33px;
+    font-size: 2.0625rem;
     margin-bottom: 5px;
 }
 
@@ -334,7 +334,7 @@ main h2 {
     background: var(--pure-black);
     color: var(--white);
     border-radius: 3px;
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 800;
     width: auto;
     border: 2px solid var(--pure-black);
@@ -388,7 +388,7 @@ main h2 {
     height: 50px;
     border-radius: 50%;
     border: 3px solid var(--pure-black);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bolder;
     color: var(--primary-blue);
     background: var(--white);
@@ -493,13 +493,13 @@ main h2 {
 .project-content h3 {
     margin-bottom: 3px;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 2.0625rem;
     color: var(--primary-blue);
 }
 
 .project-content p {
     margin-bottom: 3px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .project-link a {
@@ -546,7 +546,7 @@ main h2 {
     height: 29px;
     padding: 5px;
     color: var(--pure-black);
-    font-size: 18px;
+    font-size: 1.125rem;
     border-radius: 15px;
     background: red;
     align-self: self-end;
@@ -629,14 +629,15 @@ footer h3 {
 
 footer .top-paragraph {
     text-align: left;
-    font-size: 1.3vw;
+    font-size: 1.70rem;
+    margin-left: 24rem;
 }
 
 footer .bottom-paragraph {
     color: var(--pure-black);
-    font-size: 1.3vw;
+    font-size: 1.70rem;
     text-align: right;
-    margin-right: 49px;
+    margin-right: 26rem;
 }
 
 .contact-socialMedia-section {
@@ -654,9 +655,7 @@ footer .bottom-paragraph {
     cursor: pointer;
 }
 
-.social-media {
-    margin-bottom: 15px;
-}
+
 
 footer li:hover {
     background: grey;
