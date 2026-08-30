@@ -714,12 +714,13 @@ footer li:hover {
 
     .hero-info {
         position: static;
-        margin-bottom: 49px;
+        margin-bottom: 10px;
     }
 
     .guide {
         position: static;
-        width: 80%;
+        width: 100%;
+        text-align: center;
     }
 
     .certificate-scroll-container {
@@ -733,6 +734,14 @@ footer li:hover {
 
     .display-certificates button {
         display: none;
+    }
+
+    .zoomed-image-card {
+        max-width: 90vw;
+    }
+    .display-img-zoom button{
+        margin-right: 0;
+        margin-bottom: 2rem;
     }
 
     .hero-info p {
