@@ -628,16 +628,14 @@ footer h3 {
 }
 
 footer .top-paragraph {
-    text-align: left;
+    text-align: center;
     font-size: 1.70rem;
-    margin-left: 24rem;
 }
 
 footer .bottom-paragraph {
     color: var(--pure-black);
     font-size: 1.70rem;
-    text-align: right;
-    margin-right: 26rem;
+    text-align: center;
 }
 
 .contact-socialMedia-section {
