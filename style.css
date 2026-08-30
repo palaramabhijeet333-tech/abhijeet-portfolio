@@ -742,6 +742,7 @@ footer li:hover {
 
     .full-name h1 {
         font-size: 13vw;
+        text-align: center;
     }
 
     .home-darkMode {
@@ -762,7 +763,7 @@ footer li:hover {
 
     footer .top-paragraph {
         font-size: 3vw;
-        text-align: left;
+        text-align: center;
     }
 
     footer h3 {
@@ -772,7 +773,7 @@ footer li:hover {
 
     footer .bottom-paragraph {
         font-size: 3vw;
-        text-align: right;
+        text-align: center;
     }
 
     .contact-socialMedia-section {
